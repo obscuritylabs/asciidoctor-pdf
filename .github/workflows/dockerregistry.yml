@@ -10,10 +10,9 @@ jobs:
       - uses: actions/checkout@master
       - name: Publish to Docker Registry
         with:
-          name: obscuritylabs/asciidoctor-pdf/asciidoctor-pdf
+          name: obscuritylabs/asciidoctor-pdf
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          registry: docker.pkg.github.com
           dockerfile: Dockerfile
   publish_to_github:
     name: Publish to Github
