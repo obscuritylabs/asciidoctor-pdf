@@ -1,13 +1,26 @@
-name: Publish Docker Image 
+name: Publish Docker Images 
 
 on: [push]
 
 jobs:
-  build:
+  publish_to_dockerhub:
+    name: Publish to DockerHub
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Publish to Docker Registry
+        with:
+          name: obscuritylabs/asciidoctor-pdf/asciidoctor-pdf
+          username: ${{ secrets.DOCKER_USER }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          registry: docker.pkg.github.com
+          dockerfile: Dockerfile
+  publish_to_github:
+    name: Publish to Github
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - name: Publish to Registry
+    - name: Publish to Github Registry
       uses: elgohr/Publish-Docker-Github-Action@master
       with:
         name: obscuritylabs/asciidoctor-pdf/asciidoctor-pdf
