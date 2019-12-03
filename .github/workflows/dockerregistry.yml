@@ -9,6 +9,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Publish to Docker Registry
+        uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: obscuritylabs/asciidoctor-pdf
           username: ${{ secrets.DOCKER_USER }}
