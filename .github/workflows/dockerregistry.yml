@@ -13,4 +13,5 @@ jobs:
         name: obscuritylabs/asciidoctor-pdf/asciidoctor-pdf
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
+        registry: docker.pkg.github.com
         dockerfile: Dockerfile
