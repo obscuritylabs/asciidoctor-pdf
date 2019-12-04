@@ -37,5 +37,5 @@ FROM obscuritylabs/asciidoctor-pdf:latest
 ```
 Use to compile a PDF from command line:
 ```console
-foo@bar:~$ docker run -it -v $(pwd):/document/ docker.pkg.github.com/obscuritylabs/asciidoctor-pdf/asciidoctor-pdf /document/doc.adoc --destination-dir .
+foo@bar:~$ docker run -it -v $(pwd):/document/ obscuritylabs/asciidoctor-pdf /document/doc.adoc --destination-dir .
 ```
