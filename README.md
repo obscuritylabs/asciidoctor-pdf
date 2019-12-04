@@ -1,5 +1,3 @@
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/obscuritylabs/asciidoctor-pdf/Publish Docker Images) 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/obscuritylabs/asciidoctor-pdf/Publish Docker Images Daily?label=daily%20build)
 ![Docker Pulls](https://img.shields.io/docker/pulls/obscuritylabs/asciidoctor-pdf)
 
 # asciidoctor-pdf
